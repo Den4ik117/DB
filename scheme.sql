@@ -1,3 +1,36 @@
+CREATE TYPE user_role AS ENUM
+(
+    'guest',
+    'member',
+    'referral',
+    'company',
+    'moderator',
+    'admin'
+);
+
+CREATE TYPE test_session_type AS ENUM
+(
+    'selection-system',
+    'marathon',
+    'mistake',
+    'module',
+    'exam'
+);
+
+CREATE TYPE status AS ENUM
+(
+    'created',
+    'active',
+    'inactive'
+);
+
+CREATE TYPE question_type AS ENUM
+(
+    'single_choice',
+    'multiple_choice',
+    'plaintext'
+);
+
 CREATE TABLE IF NOT EXISTS files
 (
     id          SERIAL PRIMARY KEY,
